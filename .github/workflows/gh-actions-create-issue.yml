@@ -1,5 +1,3 @@
-
----
 name: Create test issue to resolve in GH  # ${{ github.workflow }}
 on:
 - push

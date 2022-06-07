@@ -6,12 +6,12 @@ on:
         - dev
         - 'feature/*' # any feature branch
         - 'feature/**' # any feature branch and children
-      branches-ignore:
-        - master
-      tags:
-        # - v1.*
-      path:
-        - "!README.md"
+      # branches-ignore:
+      #   - master   ## you may only define one of `branches` and `branches-ignore` for a single event
+      # tags:
+      #   # - v1.*
+      # path:
+      #   - "!README.md"
   pull_request:
       # types:
       #   - closed
