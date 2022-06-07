@@ -26,3 +26,12 @@ GIT_DESKTOP: "https://desktop.github.com/"
 GitHubActions: cschleiden.vscode-github-actions
 Git Blame: waderyan.gitblame
 YAML: redhat.vscode-yaml
+
+setup_env_for_azure: https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel#configure-the-github-secret
+
+## Language	Setup Action
+# .NET	actions/setup-dotnet
+# ASP.NET	actions/setup-dotnet
+# Java	actions/setup-java
+# JavaScript	actions/setup-node
+# Python	actions/setup-python
