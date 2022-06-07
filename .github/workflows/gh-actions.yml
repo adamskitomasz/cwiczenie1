@@ -74,7 +74,13 @@ jobs:
       #     git commit -m"Test file (TA)"
       #     git push
 
-
+  actions checkout test:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Try Actions
+      uses: actions/checkout@v3
+        with:
+          ref: int
 
 
           
