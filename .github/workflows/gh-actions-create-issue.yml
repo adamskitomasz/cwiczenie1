@@ -13,6 +13,12 @@ jobs:
   debug_variables:    # Action
     runs-on: ubuntu-20.04
     steps:
+      - name: What we use
+        run: |
+          ${{ github.repository }}
+          ${{ github.sha }}
+          ${{ github.workflow }}
+          echo "---"
 
   create_commit:
     runs-on: ubuntu-20.04

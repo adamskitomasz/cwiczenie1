@@ -1,7 +1,7 @@
 ---
 name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
 on:
-  - push:
+  push:
       branches:
         - dev
         - 'feature/*' # any feature branch
@@ -12,12 +12,12 @@ on:
         # - v1.*
       path:
         - "!README.md"
-  - pull_request:
+  pull_request:
       # types:
       #   - closed
       #   - reopened
       #   - assigned
-  - schedule:
+  schedule:
     # - cron: "0 9-17 * * MON-FRI"
 
 env:
