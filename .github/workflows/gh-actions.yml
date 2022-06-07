@@ -9,10 +9,10 @@ env:
   my_repository: tomad4/my-beautiful-proj # $GITHUB_REPOSITORY
 
 jobs:
-  debug_variables: 
+  debug_variables:    # Action
     runs-on: ubuntu-20.04
     steps:
-    - name: check Variables
+    - name: check Variables   # steps
       run: |
         pwd
         echo ${{ env.my_fav_ubuntu }}
@@ -23,6 +23,15 @@ jobs:
         echo $GITHUB_REF
         echo "Debug: actor $GITHUB_ACTOR"
         echo ${{secrets.DEV_BOT_SECRET}}
+
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}   # checkout the correct branch name
+        fetch-depth: 0                # fetch the whole repo history
+
+    - name: Git Version
+      uses: codacy/git-version@2.2.0
 
   create_file:
     runs-on: ubuntu-20.04
@@ -42,17 +51,17 @@ jobs:
     permissions:
       issues: write 
     steps:
-    - name: Create issue using REST API
-      run: |
-        curl --request POST \
-        --url https://api.github.com/repos/${{ github.repository }}/issues \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-        --header 'content-type: application/json' \
-        --data '{
-          "title": "Automated issue for commit: ${{ github.sha }}",
-          "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
-          }' \
-        --fail
+      - name: Create issue using REST API
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "title": "Automated issue for commit: ${{ github.sha }}",
+            "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
+            }' \
+          --fail
 
 # This dont wotk beacause of some GH permission issues :)
       # - name: push file to git repo
@@ -74,8 +83,13 @@ jobs:
       #     git commit -m"Test file (TA)"
       #     git push
 
-  actions_checkout_test:
+  actions checkout test:
     runs-on: ubuntu-20.04
     steps:
-    - name: Try Actions
-      uses: actions/checkout@v3
+      - name: Try Actions
+        uses: actions/checkout@v3
+        with:
+          ref: int
+
+
+          
