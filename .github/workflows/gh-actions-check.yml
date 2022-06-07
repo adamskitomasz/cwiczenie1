@@ -1,0 +1,68 @@
+---
+name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
+on:
+  - push:
+      branches:
+        - dev
+        - 'feature/*' # any feature branch
+        - 'feature/**' # any feature branch and children
+      branches-ignore:
+        - master
+      tags:
+        # - v1.*
+      path:
+        - "!README.md"
+  - pull_request:
+      # types:
+      #   - closed
+      #   - reopened
+      #   - assigned
+  - schedule:
+    # - cron: "0 9-17 * * MON-FRI"
+
+env:
+  my_github: tomad4
+  repo_name: my-beautiful-proj # $GITHUB_WORKSPACE
+  my_fav_ubuntu: ubuntu-20.04 
+  my_repository: tomad4/my-beautiful-proj # $GITHUB_REPOSITORY
+
+jobs:
+  debug_variables:    # Action
+    runs-on: ubuntu-20.04
+    steps:
+    - name: check Variables   # steps
+      run: |
+        pwd
+        echo ${{ env.my_fav_ubuntu }}
+        echo ${{ github.repository }}
+        echo ${{ github.workflow }}
+        echo $GITHUB_SHA
+        echo $GITHUB_WORKSPACE
+        echo $GITHUB_REF
+        echo "Debug: actor $GITHUB_ACTOR"
+        echo ${{secrets.DEV_BOT_SECRET}}
+
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}   # checkout the correct branch name
+        fetch-depth: 0                # fetch the whole repo history
+
+    - name: Git Version
+      uses: codacy/git-version@2.2.0
+
+  # create_file:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #   - name: Debug
+  #     run: |
+  #       curl google.pl | grep 301
+    
+  #   - name: Create file
+  #     run: |
+  #       echo "$(date)" > test.txt
+  #       echo "Result: OK" >> test.txt
+  #       cat test.txt
+    
+
+          
