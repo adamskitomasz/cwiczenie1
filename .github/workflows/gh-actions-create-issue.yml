@@ -1,23 +1,8 @@
 name: Create test issue to resolve in GH  # ${{ github.workflow }}
 on:
 - push
-env:
-  my_github: tomad4
-  repo_name: my-beautiful-proj # $GITHUB_WORKSPACE
-  my_fav_ubuntu: ubuntu-20.04 
-  my_repository: tomad4/my-beautiful-proj # $GITHUB_REPOSITORY
 
 jobs:
-  debug_variables:    # Action
-    runs-on: ubuntu-20.04
-    steps:
-      - name: What we use
-        run: |
-          ${{ github.repository }}
-          ${{ github.sha }}
-          ${{ github.workflow }}
-          echo "---"
-
   create_commit:
     runs-on: ubuntu-20.04
     permissions:

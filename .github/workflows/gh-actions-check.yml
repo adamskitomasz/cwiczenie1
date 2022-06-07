@@ -12,19 +12,13 @@ on:
       #   # - v1.*
       # path:
       #   - "!README.md"
-  pull_request:
-      # types:
-      #   - closed
-      #   - reopened
-      #   - assigned
-  schedule:
-    # - cron: "0 9-17 * * MON-FRI"
-
-env:
-  my_github: tomad4
-  repo_name: my-beautiful-proj # $GITHUB_WORKSPACE
-  my_fav_ubuntu: ubuntu-20.04 
-  my_repository: tomad4/my-beautiful-proj # $GITHUB_REPOSITORY
+  # pull_request:
+  #     types:
+  #       - closed
+  #       - reopened
+  #       - assigned
+  # schedule:
+  #   - cron: "0 9-17 * * MON-FRI"
 
 jobs:
   debug_variables:    # Action
@@ -40,7 +34,6 @@ jobs:
         echo $GITHUB_WORKSPACE
         echo $GITHUB_REF
         echo "Debug: actor $GITHUB_ACTOR"
-        echo ${{secrets.DEV_BOT_SECRET}}
 
     - name: Checkout Code
       uses: actions/checkout@v2
