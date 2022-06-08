@@ -26,14 +26,6 @@ jobs:
       with:
         name: ${{ env.AZURE_WEBAPP_NAME }}
         path: .next/
-  
-  # test-todo:
-  #   name: Check site
-  #   runs-on: ubuntu-latest
-  #   needs: build-project
-  #   steps: 
-  #   - name: Test 
-
 
   release-project:
     name: Release Project

@@ -1,0 +1,42 @@
+---
+name: Test actions  # ${{ github.workflow }}
+on:
+  push:
+env:
+  my_fav_ubuntu: ubuntu-20.04
+jobs:
+  debug_variables:    # Job to run
+    id: first-job
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name:
+      run: echo "Single line echo"
+    
+    - name: check Variables   # steps
+      run: |
+        echo "Multiline"
+        pwd
+        echo ${{ env.my_fav_ubuntu }}
+        echo ${{ github.repository }}
+        echo "---"
+        echo "end of multiline from first job"
+
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}   # checkout the correct branch name
+        fetch-depth: 0                # fetch the whole repo history
+
+  debug first job:    # Not only _ we can use also " "
+    id: second-job
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps: 
+      - name:
+        run: echo "Single line echo"
+    
+      - name: check Variables   # steps
+        run: |
+          echo "Multiline"
+          echo "end of multiline from second job"

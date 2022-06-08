@@ -2,6 +2,8 @@
 name: Create some artifacts with actions from marketplace  # ${{ github.workflow }}
 on:
   push:
+  # schedule:
+  # - cron: "0/10 9-17 * * MON-FRI"
 
 env:
   my_github: tomad4
@@ -19,7 +21,7 @@ jobs:
 
     - run: echo "Results of file test, if you see this it meand it is ok" > artifacts/word.txt
 
-    - run: echo "${{DATE}}" > artifacts/word.txt
+    - run: echo ${{}} > artifacts/word.txt
 
     - uses: actions/upload-artifact@v3
       with:
