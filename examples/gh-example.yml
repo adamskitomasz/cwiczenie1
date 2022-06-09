@@ -4,12 +4,7 @@ name: 'Link Checker: All English'
 # **Why we have it**: To make sure all links connect correctly.
 # **Who does it impact**: Docs content.
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-  pull_request:
+on: [push]
 
 permissions:
   contents: read
