@@ -19,7 +19,7 @@ jobs:
 
     - run: echo "Results of file test, if you see this it meand it is ok" > artifacts/word.txt
 
-    - run: echo "${{DATE}}" > artifacts/word.txt
+    - run: echo 'date' > artifacts/word.txt
 
     - uses: actions/upload-artifact@v3
       with:
