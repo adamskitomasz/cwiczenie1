@@ -38,24 +38,24 @@ Git Bash
           - yaml validator 
 --- 
 # Exercises with  GitHub Actions key features
-#   Configuring a workflow
+    Configuring a workflow
       - Show: 
         - simple workflow with 1env, 1need
 
-#   Building first workflows
+    Building first workflows
       - Show: 
-*       - sets\gh-actions-hello-world.yml
+        - sets\gh-actions-hello-world.yml
           - show in github actions - logs
       - Lab: 
-*1*       - labs\gh-actions-hello-world.md
+          - labs\gh-actions-hello-world.md
           - 10 min to try
           - send hello, check npm
       - - -
       - Show: 
-*       - sets\gh-actions-check-console.yml
+        - sets\gh-actions-check-console.yml
           - show in github actions - logs
       - Lab: 
-*2*       - lab\gh-action-check-console.md
+          - lab\gh-action-check-console.md
           - 10 min to try
           - Run simple code with result to logs
       - - -
@@ -79,21 +79,21 @@ Git Bash
       - Show: 
         - sets\gh-actions-variables.yml
       - Lab: 
-*3*     - lab\gh-actions-variables.md
+        - lab\gh-actions-variables.md
         - try to find and test some GitHub Variables 
         - reuse YAML form lab to say hello to You
 
 #   Continuous Integration with GitHub Actions
-#   Building and validating the project
+    Building and validating the project
       - Show: sets\gh-build-app.yml
 
 #   Uploading artifact
       - Show: sets\gh-actions-create-file.yml
         - Go to GH and show how it looks
-*4*     - Lab: lab\gh-actions-create-file.md
+        - Lab: lab\gh-actions-create-file.md
 
 #   Creating a GitHub release/matrix
-*5*     - Labs: labs\gh-matrix.md
+        - Labs: labs\gh-matrix.md
         - Go to GH and show how it looks
         - Show at least 2 artifacts
       [...]more info: https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
