@@ -11,7 +11,8 @@ jobs:
         run: |
           echo "Say hello to bash" 
           echo $BASH_VERSION
-      
+          echo `date`
+          
       - name: multiline script with check npm
         run: | 
           echo "123"
