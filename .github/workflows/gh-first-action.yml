@@ -28,13 +28,12 @@ jobs:
         ref: ${{ github.head_ref }}   # checkout the correct branch name
         fetch-depth: 0                # fetch the whole repo history
 
-  debug first job:    # Not only _ we can use also " "
+  debug_first_job:    # IDs may only contain alphanumeric characters, '_', and '-'. IDs must start with a letter or '_' and and must be less than 100 characters.
     needs: echo-step
     runs-on: ubuntu-latest
     steps: 
       - name:
         id: second-job
-
         run: echo "Single line echo"
     
       - name: check Variables   # steps
