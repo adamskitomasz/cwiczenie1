@@ -14,7 +14,6 @@ Tomasz Adamski
 
 ---
 
-### GitHub Actions training agenda:
 # Core concepts of a GitHub Action:
   ## Why care about Github Actions? (presentation)
     
@@ -46,7 +45,7 @@ Tomasz Adamski
   - sets\gh-actions-hello-world.yml
   - show in github actions - logs
 ### Lab: 
-  - labs\gh-actions-hello-world.md
+  - labs\lab 1.md
   - 10 min to try
   - send hello, check npm
   
@@ -83,21 +82,27 @@ Tomasz Adamski
 
 #   Continuous Integration with GitHub Actions
   - Building and validating the project
-### Show: sets\gh-build-app.yml
+### Show: 
+  - sets\gh-build-app.yml
 #   Uploading artifact
-### Show: sets\gh-actions-create-file.yml
+### Show: 
+  - sets\gh-actions-create-file.yml
   - Go to GH and show how it looks
-  - Lab: lab\gh-actions-create-file.md
+### Lab:
+  - lab\gh-actions-create-file.md
 
 #   Creating a GitHub release/matrix
-  - Labs: labs\gh-matrix.md
+  - labs: labs\gh-matrix.md
   - Go to GH and show how it looks
   - Show at least 2 artifacts
   [...]more info: https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
 ---
 # Continuous Deployment with GitHub Actions
-# Preparing secrets in repository
-  ### Show 
+## Preparing secrets in repository
+### Show
+  - 
+### Lab
+  - labs\lab 4.md 
 # Setting up Azure service principal and credentials
 
 # Preparing Azure Webapp in your subscription

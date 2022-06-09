@@ -1,4 +1,5 @@
 - Copy content of this snipet to your repository into .github/workflows
+- Mind to fix path of myvar in steps
 ```
 
 name: Create some artifacts with actions from marketplace  # ${{ github.workflow }}
@@ -16,9 +17,9 @@ jobs:
 
     - run: mkdir -p artifacts
 
-    - run: echo ${{my_var}} > artifacts/word.txt
+    - run: echo ${{my_var}} > artifacts/word.txt # fix my_var here
 
-    - run: echo ......... >> artifacts/word.txt   # here place  echo 'date'  to append current date to file 
+    - run: echo ......... >> artifacts/word.txt # here place  echo 'date'  to append current date to file 
 
     - uses: actions/upload-artifact@v3
       with:
