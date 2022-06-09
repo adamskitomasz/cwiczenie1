@@ -321,5 +321,29 @@ Demo:
 * <https://github.com/azure/arm-deploy>
 * <https://github.com/azure/webapps-deploy>
 
+[filter-pattern-cheat-sheet] "https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet"
 
+# Other useful apps
+[GIT_DESKTOP] "https://desktop.github.com/"
+
+# VSCode Extensions that I use:
+**GitHubActions**: cschleiden.vscode-github-actions
+**Git Blame**: waderyan.gitblame
+**YAML**: redhat.vscode-yaml
+
+[setup_env_for_azure]: https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel#configure-the-github-secret
+
+# Cheat sheet:
+[address_to_git_actions] "https://docs.github.com/en/actions"
+
+# If you are too lazy or you are devops:
+[cron_tab_cheater] "https://crontab.guru/"
+
+# Some prepared runners 
+**Language**	*Setup Action*
+**.NET**	    *actions/setup-dotnet*
+**ASP.NET**	    *actions/setup-dotnet*
+**Java**	    *actions/setup-java*
+**JavaScript**	*actions/setup-node*
+**Python**	    *actions/setup-python*
 ## Thanks! Q&A

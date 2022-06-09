@@ -1,4 +1,9 @@
----
+- Copy content of this snipet to your repository into .github/workflows
+- Uncomment multiline "run" to test 
+- try with "echo" someting that you want check - version of nuget, python, java etc.
+
+```
+
 name: Check different consoles
 
 on: [push]
