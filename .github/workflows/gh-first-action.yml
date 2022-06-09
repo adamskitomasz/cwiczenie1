@@ -6,7 +6,6 @@ env:
   my_fav_ubuntu: ubuntu-20.04
 jobs:
   debug_variables:    # Job to run
-    id: first-job
     runs-on: ubuntu-latest
     steps:
     
@@ -14,6 +13,7 @@ jobs:
       run: echo "Single line echo"
     
     - name: check Variables   # steps
+      id: echo-step
       run: |
         echo "Multiline"
         pwd
@@ -29,11 +29,11 @@ jobs:
         fetch-depth: 0                # fetch the whole repo history
 
   debug first job:    # Not only _ we can use also " "
-    id: second-job
-    needs: first-job
     runs-on: ubuntu-latest
     steps: 
       - name:
+        id: second-job
+        needs: echo-step
         run: echo "Single line echo"
     
       - name: check Variables   # steps
