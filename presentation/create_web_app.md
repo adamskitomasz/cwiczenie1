@@ -15,8 +15,8 @@
 - Create new resource group - it will be easier to delete all resources after training
 - Choose unique app name
 - It will be Code container
-- Runtime stack is : .NET Core 3.1
-- Operating system: Windows
+- Runtime stack is : NODE JS 16
+- Operating system: Linux
 - Create new App Service plan
 - Change tier in app service plan for free(Dev one)
 

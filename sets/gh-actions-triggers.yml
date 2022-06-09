@@ -20,7 +20,8 @@ on:
   #   - cron: "0 9-17 * * MON-FRI"
 
 jobs:
-  debug_variables:    # Action
+  debug:    # Action
     runs-on: ubuntu-20.04
     steps:
-      run: echo "Hello Triggers"
+      - name: Just echo
+        run: echo `date`
