@@ -8,12 +8,11 @@ Before you start, you should prepare few resources, before taking part in traini
   - Your farvorite text editor and GIT command line, or IDE environment with GIT.  All steps from training can be execute via browser on github.com too.
 
 ## Other useful apps
-# GIT_DESKTOP: "https://desktop.github.com/"
 
-# VisualStudioCode Extensions:
-- GitHubActions: 
-  - cschleiden.vscode-github-actions
-- GitBlame: 
-  - waderyan.gitblame
-- YAML: 
-  - redhat.vscode-yaml
+**GIT_DESKTOP**
+- "https://desktop.github.com/"
+
+**VisualStudioCode Extensions**
+- GitHubActions:  cschleiden.vscode-github-actions
+- GitBlame:  waderyan.gitblame
+- YAML:  redhat.vscode-yaml
