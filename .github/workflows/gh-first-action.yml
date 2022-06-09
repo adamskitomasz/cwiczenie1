@@ -29,11 +29,12 @@ jobs:
         fetch-depth: 0                # fetch the whole repo history
 
   debug first job:    # Not only _ we can use also " "
+    needs: echo-step
     runs-on: ubuntu-latest
     steps: 
       - name:
         id: second-job
-        needs: echo-step
+
         run: echo "Single line echo"
     
       - name: check Variables   # steps
