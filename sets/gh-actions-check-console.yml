@@ -4,7 +4,7 @@ name: Check different consoles
 on: [push]
 
 jobs: 
-  shell-command:
+  linux-bash:
     runs-on: ubuntu-18.04
     steps: 
       - name: Write so
@@ -19,7 +19,7 @@ jobs:
           node -v
           npm -v
 
-  powershell-command:
+  windows-powershell:
     runs-on: windows-latest
     steps: 
       - name: Write some
