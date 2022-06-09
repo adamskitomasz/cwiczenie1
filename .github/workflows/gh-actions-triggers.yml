@@ -1,0 +1,26 @@
+name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
+on:
+  push:
+      branches:
+        - dev
+        - 'feature/*' # any feature branch
+        - 'feature/**' # any feature branch and children
+      # branches-ignore:
+      #   - master   ## you may only define one of `branches` and `branches-ignore` for a single event
+      # tags:
+      #   # - v1.*
+      # path:
+      #   - "!README.md"
+  # pull_request:
+  #     types:
+  #       - closed
+  #       - reopened
+  #       - assigned
+  # schedule:
+  #   - cron: "0 9-17 * * MON-FRI"
+
+jobs:
+  debug_variables:    # Action
+    runs-on: ubuntu-20.04
+    steps:
+      run: echo "Hello Triggers"
