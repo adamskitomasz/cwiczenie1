@@ -6,7 +6,7 @@ env:
   my_fav_ubuntu: ubuntu-20.04
 jobs:
   debug_variables:    # Job to run
-    id: echo-step
+
     runs-on: ubuntu-latest
     steps:
     
@@ -14,7 +14,7 @@ jobs:
       run: echo "Single line echo"
     
     - name: check Variables   # steps
-
+      id: echo-step
       run: |
         echo "Multiline"
         pwd
@@ -30,7 +30,7 @@ jobs:
         fetch-depth: 0                # fetch the whole repo history
 
   debug_first_job:    # IDs may only contain alphanumeric characters, '_', and '-'. IDs must start with a letter or '_' and and must be less than 100 characters.
-    needs: echo-step
+    needs: debug_variables
     runs-on: ubuntu-latest
     steps: 
       - name:
