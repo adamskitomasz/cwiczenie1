@@ -2,8 +2,8 @@
 Tomasz Adamski
 
 ## Breaks:
-**45-50min-10min break**
-
+**50min session - 10min break**
+**Lunch break 1h : 12-13 ?
 ## What we need to start:
 1. Github account - created with @gds.ey.pl email
 2. VSCode
