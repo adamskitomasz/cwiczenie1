@@ -4,13 +4,12 @@ Tomasz Adamski
 ## Breaks:
 **45-50min-10min break**
 
-# What we need to start:
-
+## What we need to start:
 1. Github account - created with @gds.ey.pl email
 2. VSCode
 3. Git Bash
 4. 50mb free space on disk (-_-)
-5. nice to have : Linux (-.-)
+
 
 ---
 
@@ -18,12 +17,12 @@ Tomasz Adamski
 ## Why care about Github Actions? (presentation)
 - Automate, customize, and execute your software development workflows right in your repository with GitHub Actions. You can discover, create, and share actions to perform any job you'd like, including CI/CD, and combine actions in a completely customized workflow.
 ## Core concepts (presentation)
-- 5 cases where we ca use feature like github actions
-- deployment
-- testing
-- lack of devops/appadmin
-- we have to use Azure but we cannot access to client console
-- PM
+5 cases where we ca use feature like github actions
+* deployment
+* testing
+* lack of devops/appadmin
+* we have to use Azure but we cannot access to client console
+* PM
 ---    
 # 10 words about YAML
 - 2 spaces instead of 4 :)
@@ -103,10 +102,9 @@ Tomasz Adamski
 # Continuous Deployment with GitHub Actions
 ## Preparing secrets in repository
 ### Show
-- 
+- Go to GH and show how it looks
 ### Lab
 - labs\lab 4.md 
-# Setting up Azure service principal and credentials
 
 # Preparing Azure Webapp in your subscription
 ### Show: How to set WebApp Service
