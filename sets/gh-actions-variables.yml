@@ -1,10 +1,10 @@
 ---
-name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
+name: Test actions and variables  # ${{ github.workflow }}
 on:
   push:
 
 env:
-  own: test
+  my_fav_ubuntu: "20.04"
 
 jobs:
   debug_variables:    # Action

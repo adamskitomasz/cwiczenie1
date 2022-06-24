@@ -16,8 +16,9 @@ on:
   #       - closed
   #       - reopened
   #       - assigned
-  # schedule:
-  #   - cron: "0 9-17 * * MON-FRI"
+  schedule:
+    # - cron: "0 16-17 * * MON-FRI"
+    - cron: "1 * * 7 MON"
 
 jobs:
   debug:    # Action
