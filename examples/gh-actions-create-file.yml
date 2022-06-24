@@ -1,5 +1,6 @@
 ---
 name: Create some artifacts with actions from marketplace  # ${{ github.workflow }}
+
 on:
   push:
 
@@ -10,7 +11,7 @@ env:
   my_repository: tomad4/my-beautiful-proj # $GITHUB_REPOSITORY
 
 jobs:
-  debug_variables:    # Action
+  name_of_action:    # Action
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
@@ -25,3 +26,5 @@ jobs:
       with:
         name: my-artifact
         path: artifacts/word.txt
+        
+        
