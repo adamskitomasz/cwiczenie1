@@ -3,6 +3,9 @@ name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
 on:
   push:
 
+env:
+  own: test
+
 jobs:
   debug_variables:    # Action
     runs-on: ubuntu-20.04

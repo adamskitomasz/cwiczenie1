@@ -78,7 +78,7 @@ Tomasz Adamski
 ### Show: 
 - sets\gh-actions-variables.yml
 ### Lab: 
-- lab\gh-actions-variables.md
+- lab\lab 3.md
 - try to find and test some GitHub Variables 
 - reuse YAML form lab to say hello to You
 
@@ -94,7 +94,7 @@ Tomasz Adamski
 - lab\gh-actions-create-file.md
 
 #   Creating a GitHub release/matrix
-- labs: labs\gh-matrix.md
+- labs: labs\lab 6.md
 - Go to GH and show how it looks
 - Show at least 2 artifacts
 [...]more info: https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs

@@ -20,7 +20,8 @@ jobs:
     strategy:
       matrix:
        include:
-
+         - value1
+         - value2 
     steps:
          - name: Create a file
            run: echo ${{ matrix.version }} > my_file_${{ matrix.version }}.txt

@@ -1,16 +1,16 @@
 name: Test actions and scheduleres/triggers  # ${{ github.workflow }}
 on:
   push:
-      branches:
-        - dev
-        - 'feature/*' # any feature branch
-        - 'feature/**' # any feature branch and children
+      # branches:
+      #   - dev
+      #   - 'feature/*' # any feature branch
+      #   - 'feature/**' # any feature branch and children
       # branches-ignore:
       #   - master   ## you may only define one of `branches` and `branches-ignore` for a single event
       # tags:
-      #   # - v1.*
+      #   - v2.*
       # path:
-      #   - "!README.md"
+      #   - "README.md" 
   # pull_request:
   #     types:
   #       - closed
@@ -25,3 +25,5 @@ jobs:
     steps:
       - name: Just echo
         run: echo `date`
+        ref:
+          - specific_branch_for_schedule
